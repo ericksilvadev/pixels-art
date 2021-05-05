@@ -15,12 +15,10 @@ pixelsColumn(25);
 const color = document.getElementsByClassName('color');
 const palette = document.getElementById('color-palette');
 
-palette.addEventListener('click', () => {
+palette.addEventListener('click', (event) => {
   for (let index = 0; index < color.length; index += 1) {
     color[index].classList.remove('selected');
     event.target.classList.add('selected');
-    const selected = document.querySelector('.selected');
-    selected.style.backgroundColor = color[index].style.backgroundColor;
   }
 });
 
@@ -36,3 +34,29 @@ palette.addEventListener('click', () => {
 //     }
 //   });
 // }
+
+// colorir pixels
+
+// for (let index = 0; index < color)
+
+// let colorSelected = document.querySelector('.selected');
+// const selected = document.querySelector('.selected');
+// selected.style.backgroundColor = color[0];
+const pixels = document.getElementsByClassName('pixel');
+
+for (let index = 0; index < pixels.length; index += 1) {
+  let colorSelected = color[0].style.backgroundColor;
+  pixels[index].addEventListener('click', () => {
+    pixels[index].style.backgroundColor = colorSelected;
+  });
+}
+
+// limpar todo o quadro
+
+const clearBtn = document.getElementsByTagName('button')[0];
+
+clearBtn.addEventListener('click', () => {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  }
+});

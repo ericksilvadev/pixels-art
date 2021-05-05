@@ -1,5 +1,10 @@
-.colot-palette {
-  display: flex;
+body {
+  background-color: rgb(186, 211, 219);
+  text-align: center;
+}
+
+.color-palette {
+  display: inline-block;
 }
 
 .color {
@@ -7,7 +12,10 @@
   height: 40px;
   border: solid black 1px;
   display: inline-block;
-  justify-content: center;
+}
+
+.btns {
+  margin: 10px;
 }
 
 .color-palette :nth-child(1) {
@@ -33,6 +41,7 @@
 .pixel-board {
   width: 250px;
   line-height: 0px;
+  margin: auto;
 }
 
 .pixel {
@@ -42,4 +51,5 @@
   height: 40px;
   border: solid black 1px;
   display: inline-block;
+  background-color: white;
 }
