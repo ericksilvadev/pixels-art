@@ -19,9 +19,12 @@
       <div class="color" style='background-color: blue'></div>
     </section>
     <div class="btns">
+      <label for="box-size">Insira aqui o tamanho do quadro</label><br>
+      <input type="number" name="box-size" class="box-size" id="board-size" placeholder='numero de 0 a 50' min='1' max='50'>
+      <button class="submit" id='generate-board'>VQV</button>
       <button id='clear-board' class="clear">Limpar</button>
     </div>
-    <section class='pixel-board' id="pixel-board"></section>
+    <section class='pixel-board' id="pixel-board" style='width: 200px'></section>
   </main>
   <script src="script.js"></script>
 </body>

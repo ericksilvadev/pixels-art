@@ -1,17 +1,34 @@
 // adicionar o pixel board
+
+const generateBtn = document.getElementById('generate-board');
+const inputSize = document.getElementById('box-size');
+
 function pixelsColumn(pixelsNumber) {
   const pixelBoard = document.getElementById('pixel-board');
-  // let pixelBoardWidth = pixelsNumber * 42;
-  for (let index = 0; index < pixelsNumber; index += 1) {
+  const pixelBoardWidth = pixelsNumber * 42;
+  pixelBoard.style.width = pixelBoardWidth + 'px';
+  for (let index = 0; index < pixelsNumber * pixelsNumber; index += 1) {
     const createPixel = document.createElement('div');
     createPixel.classList.add('pixel');
     pixelBoard.appendChild(createPixel);
   }
 }
 
-pixelsColumn(25);
+pixelsColumn(5);
+
+generateBtn.addEventListener('click', () => {
+  console.log(inputSize.value);
+  if (inputSize.value < 0) {
+    alert('ERRO! Adicione um valor maior que 0');
+  } else if (inputSize.value > 50) {
+    alert('ERRO! Adicione um valor menor ou igual a 50');
+  } else {
+    pixelsColumn(inputSize.value);
+  }
+});
 
 // adidionar a seleção de cores
+
 const palette = document.getElementById('color-palette');
 const color = document.getElementsByClassName('color');
 
@@ -22,41 +39,18 @@ palette.addEventListener('click', (event) => {
   }
 });
 
-// for (let index = 0; index < color.length; index += 1) {
-//   color[index].addEventListener('click', () => {
-//     if (color[index].classList.contains('selected')) {
-//       color[index].classList.remove('selected');
-//     } else {
-//       color[index].classList.add('selected');
-//       const selected = document.querySelector('.selected');
-//       selected.style.backgroundColor = color[index].style.backgroundColor;
-//       console.log('funcionou');
-//     }
-//   });
-// }
-
-// for (let index = 0; index < color)
-
-// let colorSelected = document.querySelector('.selected');
-// const selected = document.querySelector('.selected');
-// selected.style.backgroundColor = color[0];
-
-// colorir pixels
-
-// let selected = document.querySelector('.selected');
-// let colorSelected = selected.style.backgroundColor;
-// console.log(colorSelected);
 const pixels = document.getElementsByClassName('pixel');
 
 for (let index = 0; index < pixels.length; index += 1) {
   pixels[index].addEventListener('click', () => {
     pixels[index].style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+    console.log(document.querySelector('.selected').style.backgroundColor);
   });
 }
 
 // limpar todo o quadro
 
-const clearBtn = document.getElementsByTagName('button')[0];
+const clearBtn = document.getElementsByTagName('button')[1];
 
 clearBtn.addEventListener('click', () => {
   for (let index = 0; index < pixels.length; index += 1) {
