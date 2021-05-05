@@ -43,14 +43,14 @@ palette.addEventListener('click', (event) => {
 
 // colorir pixels
 
-const selected = document.querySelector('.selected');
-const colorSelected = selected.style.backgroundColor;
-console.log(colorSelected);
+// let selected = document.querySelector('.selected');
+// let colorSelected = selected.style.backgroundColor;
+// console.log(colorSelected);
 const pixels = document.getElementsByClassName('pixel');
 
 for (let index = 0; index < pixels.length; index += 1) {
   pixels[index].addEventListener('click', () => {
-    pixels[index].style.backgroundColor = colorSelected;
+    pixels[index].style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
   });
 }
 

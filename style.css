@@ -13,6 +13,7 @@ body {
   height: 40px;
   border: solid black 1px;
   display: inline-block;
+  /* border-radius: 50%; */
 }
 
 .btns {
