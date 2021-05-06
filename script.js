@@ -64,3 +64,19 @@ clearBtn.addEventListener('click', () => {
     pixels[index].style.backgroundColor = 'white';
   }
 });
+
+// gerar cores aleatóriamente;
+
+function generateColors() {
+  const letters = '0123456789ABCDEF';
+  for (let index = 1; index < color.length; index += 1) {
+    let colorGenerate = '#';
+    for (let index2 = 0; index2 < 6; index2 += 1) {
+      colorGenerate += letters[Math.floor(Math.random() * 16)];
+    }
+    color[index].style.backgroundColor = colorGenerate;
+  }
+  return letters;
+}
+
+window.onload = generateColors();
