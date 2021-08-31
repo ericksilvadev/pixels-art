@@ -1,6 +1,6 @@
 # Boas vindas ao repositório do projeto Arte com Pixels!
 
-Este é um projeto que desenvolvi de maneira independente para praticar CSS e JavaScript. Também pude aplicar os conceitos de modo claro e modo escuro.
+Neste projeto, desenvolvi um quadro que pode ser colorido pelo usuário, com uma paleta de cores que é gerada aleatóreamente a cada carregamento da página.
 
 *Este projeto foi desenvolvido seguindo os requisitos e testes passados pela [Trybe](https://www.betrybe.com/), somente os estilos foram feitos de maneira totalmente independente*
 
